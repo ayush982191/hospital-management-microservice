@@ -26,4 +26,12 @@ public class PatientMapper {
         patient.setRegisteredDate(LocalDate.parse(patientRequestDTO.getRegisteredDate()));
         return patient;
     }
+
+    public static Patient updateEntity(Patient existingPatient, PatientRequestDTO patientRequestDTO) {
+        existingPatient.setName(patientRequestDTO.getName());
+        existingPatient.setEmail(patientRequestDTO.getEmail());
+        existingPatient.setAddress(patientRequestDTO.getAddress());
+        existingPatient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth()));
+        return existingPatient;
+    }
 }

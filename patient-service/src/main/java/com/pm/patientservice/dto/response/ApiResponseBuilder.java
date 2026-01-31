@@ -4,10 +4,10 @@ import com.pm.patientservice.service.MessageService;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ResponseBuilder<T> {
+public class ApiResponseBuilder<T> {
     private final MessageService messageService;
 
-    public ResponseBuilder(MessageService messageService) {
+    public ApiResponseBuilder(MessageService messageService) {
         this.messageService = messageService;
     }
 
